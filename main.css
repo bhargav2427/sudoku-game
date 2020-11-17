@@ -1,0 +1,34 @@
+.main {
+  position: absolute;
+  left: 40%;
+}
+
+table {
+  position: relative;
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+td {
+  padding: 8 8 8 8;
+  height: 35px;
+  width: 15px;
+  text-align: center;
+}
+
+td,
+tr {
+  border: 1px solid black;
+}
+
+td:nth-child(3n) {
+  border-right: 3px solid black;
+}
+
+tr:nth-child(3n) {
+  border-bottom: 3px solid black;
+}
+
+.main2 {
+  position: absolute;
+  top: 500px;
+}
