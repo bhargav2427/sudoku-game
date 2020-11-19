@@ -290,7 +290,26 @@ function solve(sudoku) {
 
 // given a solved sudoku and the number of steps, prints out the sudoku
 function showSudoku(sudoku, i) {
-  for (var j = 0; j < 81; j++) {
-    document.getElementById(j).innerHTML = sudoku[j];
+  for (var j = 0; j < 70; j++) {
+    var x = Math.floor(Math.random() * (81 - 0) + 0);
+    document.getElementById(x).innerHTML = sudoku[x];
+    document.getElementById(x).style.pointerEvents = "none";
+  }
+}
+
+function s() {
+  //return sudoku;
+  console.log(sudoku);
+}
+
+function input(x) {
+  if (x.value == undefined) {
+    if (sudoku[x] == value) {
+      document.getElementById(x).innerHTML = value;
+    } else {
+      window.alert("Wrong Click");
+    }
+  } else {
+    value = x.value;
   }
 }
