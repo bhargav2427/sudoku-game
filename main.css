@@ -42,3 +42,8 @@ input {
 h2 {
   text-align: center;
 }
+
+.onfocused {
+  background-color: rgb(184, 203, 255);
+  color: black;
+}

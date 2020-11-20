@@ -318,6 +318,7 @@ function input(x) {
     }
   } else {
     value = x.value;
+    document.getElementById(x.id).classList.add("onfocused");
   }
 }
 
@@ -335,4 +336,8 @@ function timer() {
 
 function pad(d) {
   return d < 10 ? "0" + d.toString() : d.toString();
+}
+
+function changeColor(x) {
+  document.getElementById(x).classList.remove("onfocused");
 }
