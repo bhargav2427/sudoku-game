@@ -29,6 +29,16 @@ tr:nth-child(3n) {
 }
 
 .main2 {
-  position: absolute;
-  top: 500px;
+  text-align: center;
+}
+
+input {
+  height: 35px;
+  width: 35px;
+  margin: 10 10 10 10;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
 }
