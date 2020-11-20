@@ -294,17 +294,24 @@ function showSudoku(sudoku, i) {
     var x = Math.floor(Math.random() * (81 - 0) + 0);
     document.getElementById(x).innerHTML = sudoku[x];
     document.getElementById(x).style.pointerEvents = "none";
+    document.getElementById(x).style.color = "rgb(0, 75, 166)";
   }
 }
-
+/*
 function s() {
   //return sudoku;
   console.log(sudoku);
 }
-
+*/
+var cnt = 0;
 function input(x) {
   if (x.value == undefined) {
-    if (sudoku[x] == value) {
+    if (
+      value == "c" &&
+      document.getElementById(x).style.pointerEvents != "none"
+    ) {
+      document.getElementById(x).innerHTML = "";
+    } else if (sudoku[x] == value) {
       document.getElementById(x).innerHTML = value;
     } else {
       window.alert("Wrong Click");
@@ -312,4 +319,20 @@ function input(x) {
   } else {
     value = x.value;
   }
+}
+
+var seconds = 0;
+var second = 0;
+var minutes = 0;
+setInterval(timer, 1000);
+function timer() {
+  document.getElementById("time").innerHTML =
+    "Time " + pad(minutes) + ":" + pad(second);
+  second = seconds - minutes * 60;
+  seconds++;
+  minutes = Math.floor(seconds / 60);
+}
+
+function pad(d) {
+  return d < 10 ? "0" + d.toString() : d.toString();
 }
