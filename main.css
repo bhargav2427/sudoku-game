@@ -47,3 +47,9 @@ h2 {
   background-color: rgb(184, 203, 255);
   color: black;
 }
+
+span {
+  color: rgb(87, 87, 87);
+  position: absolute;
+  bottom: 5px;
+}
